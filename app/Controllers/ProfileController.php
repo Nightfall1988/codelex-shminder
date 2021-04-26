@@ -82,16 +82,6 @@ class ProfileController
             $profileColl = $this->service->getAllPotentialProfiles($profile); // COLLECTION OF ALL NON-LIKED PROFILES
             $profile->setSuggestedLikes($profileColl);
             $page = $view->profilePage();
-            /*
-            
-            -> LIKE / DISLIKE FUNCTIONALITY
-            -> CSS AND LAYOUT
-            -> CREATE FOLDER FOR EACH USER'S PHOTOS IN storage 
-            -> index.php = DIVIDE INTO SEVERAL PHP FILES "routes.php", "container.php"
-
-            
-            */
-            //var_dump($profile);
             return [$page, $profile];
         }
     }
